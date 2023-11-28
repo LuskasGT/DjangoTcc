@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <!--
@@ -21,22 +21,22 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href='{% static "css/bootstrap/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
   <!-- slick slider -->
-  <link rel="stylesheet" href='{% static "css/slick/slick.css" %}'>
+  <link rel="stylesheet" href="{% static 'css/slick/slick.css' %}">
   <!-- themefy-icon -->
-  <link rel="stylesheet" href='{% static "css/themify-icons/themify-icons.css" %}'>
+  <link rel="stylesheet" href="{% static 'css/themify-icons/themify-icons.css' %}">
   <!-- venobox css -->
-  <link rel="stylesheet" href='{% static "css/venobox/venobox.css" %}'>
+  <link rel="stylesheet" href="{% static 'css/venobox/venobox.css' %}">
   <!-- card slider -->
-  <link rel="stylesheet" href='{% static "css/card-slider/css/style.css" %}'>
-
+  <link rel="stylesheet" href="{% static 'css/card-slider/css/style.css' %}">
+  
   <!-- Main Stylesheet -->
-  <link href='{% static "css/style.css" %}' rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href='{% static "img/images/favicon.ico" %}' type="image/x-icon">
-  <link rel="icon" href='{% static "img/images/favicon.ico" %}' type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 
 </head>
 
@@ -51,13 +51,16 @@
       <div class="collapse navbar-collapse text-center" id="navigation">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fale-conosco.html">Fale conosco</a>
+            <a class="nav-link" href="{% url 'fale-conosco' %}">Fale conosco</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="adocao.html">Adote hoje</a>
+            <a class="nav-link" href="{% url 'adote' %}">Adote hoje</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'porqueAdotar' %}">Porque Adotar</a>
           </li>
         </ul>
       </div>
@@ -67,23 +70,22 @@
 
   <!-- banner -->
   <section class="banner bg-cover position-relative d-flex justify-content-center align-items-center"
-    data-background='{% static "/img/images/backgrounds/Adote.png" %}' height="500px">
+    data-background="{% static 'img/backgrounds/Adote.png' %}" style =" height: 630px;">
 
   </section>
   <!-- /banner -->
-
 
 
   <!-- blog -->
   <section class="section">
     <div class="container">
       <div class="row">
-
+        
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card-cachorro">
             <article class="card">
-              <a href="lolaForms.html">
-                <img src='{% static "/img/images/cards/ney.jfif" %}' alt="post-thumb" class="card-img-top mb-2">
+              <a href="{% url 'formsLola' %}">
+                <img src="{% static 'img/animais/cachorro1.jpg' %}" alt="post-thumb" class="card-img-top mb-2" style="height: 256px; border-radius: 10px;">
                 <div class="card-body p-0">
                   <a class="h4 card-title d-block text-dark hover-text-underline">
                     Lola</a>
@@ -92,84 +94,82 @@
             </article>
           </div>
         </div>
-
+  
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card-cachorro">
             <article class="card">
-              <a href="lolaForms.html">
-                <img src='{% static "/img/images/cards/ney.jfif" %}' alt="post-thumb" class="card-img-top mb-2">
+              <a href="{% url 'formsRex' %}">
+                <img src="{% static 'img/animais/cachorro2.jpg' %}" alt="post-thumb" class="card-img-top mb-2" style="height: 256px; border-radius: 10px;">
                 <div class="card-body p-0">
                   <a class="h4 card-title d-block text-dark hover-text-underline">
-                    Lola</a>
+                    Rex</a>
                 </div>
               </a>
             </article>
           </div>
         </div>
-
-
+  
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card-cachorro">
             <article class="card">
-              <a href="lolaForms.html">
-                <img src='{% static "/img/images/cards/ney.jfif" %}' alt="post-thumb" class="card-img-top mb-2">
+              <a href="{% url 'formsThor' %}">
+                <img src="{% static 'img/animais/cachorro3.jpg' %}" alt="post-thumb" class="card-img-top mb-2" style="height: 256px; border-radius: 10px;">
                 <div class="card-body p-0">
                   <a class="h4 card-title d-block text-dark hover-text-underline">
-                    Lola</a>
+                    Thor</a>
                 </div>
               </a>
             </article>
           </div>
         </div>
-
-
+  
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card-cachorro">
             <article class="card">
-              <a href="lolaForms.html">
-                <img src='{% static "/img/images/cards/ney.jfif" %}' alt="post-thumb" class="card-img-top mb-2">
+              <a href="{% url 'formsBolt' %}">
+                <img src="{% static 'img/animais/cachorro4.jpg' %}" alt="post-thumb" class="card-img-top mb-2" style="height: 256px; border-radius: 10px;">
                 <div class="card-body p-0">
                   <a class="h4 card-title d-block text-dark hover-text-underline">
-                    Lola</a>
+                    Bolt</a>
                 </div>
               </a>
             </article>
           </div>
         </div>
-
+  
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card-cachorro">
             <article class="card">
-              <a href="lolaForms.html">
-                <img src='{% static "/img/images/cards/ney.jfif" %}' alt="post-thumb" class="card-img-top mb-2">
+              <a href="{% url 'formsMia' %}">
+                <img src="{% static 'img/animais/gato1.jpg' %}" alt="post-thumb" class="card-img-top mb-2" style="height: 256px; border-radius: 10px;">
                 <div class="card-body p-0">
                   <a class="h4 card-title d-block text-dark hover-text-underline">
-                    Lola</a>
+                    Mia</a>
                 </div>
               </a>
             </article>
           </div>
         </div>
-
+  
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card-cachorro">
             <article class="card">
-              <a href="lolaForms.html">
-                <img src='{% static "/img/images/cards/ney.jfif" %}' alt="post-thumb" class="card-img-top mb-2">
+              <a href="{% url 'formsSafira' %}">
+                <img src="{% static 'img/animais/gato2.jpg' %}" alt="post-thumb" class="card-img-top mb-2" style="height: 256px; border-radius: 10px;">
                 <div class="card-body p-0">
                   <a class="h4 card-title d-block text-dark hover-text-underline">
-                    Lola</a>
+                    Safira</a>
                 </div>
               </a>
             </article>
           </div>
         </div>
-
         
       </div>
     </div>
   </section>
   <!-- /blog -->
+  
 
   <!-- footer -->
   <footer class="bg-secondary position-relative">
@@ -177,25 +177,8 @@
     <div class="section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-3 col-6">
-            <h4 class="text-white mb-5">About</h4>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-light d-block mb-3">Service</a></li>
-              <li><a href="#" class="text-light d-block mb-3">Conatact</a></li>
-              <li><a href="#" class="text-light d-block mb-3">About us</a></li>
-              <li><a href="#" class="text-light d-block mb-3">Blog</a></li>
-              <li><a href="#" class="text-light d-block mb-3">Support</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-6">
-            <h4 class="text-white mb-5">Company</h4>
-            <ul class="list-unstyled">
-              <li><a href="#" class="text-light d-block mb-3">Service</a></li>
-              <li><a href="#" class="text-light d-block mb-3">Conatact</a></li>
-              <li><a href="#" class="text-light d-block mb-3">About us</a></li>
-              <li><a href="#" class="text-light d-block mb-3">Blog</a></li>
-              <li><a href="#" class="text-light d-block mb-3">Support</a></li>
-            </ul>
+          <div class="col-md-12 lg-12 col-12">
+            <h4 class="text-white mb-10 lg-10 ">Esse site foi feito a partir de um projeto de trabalho de conclusão de curso da escola Etec João Maria Stevantto do ano de 2023</h4>
           </div>
         </div>
       </div>
@@ -204,7 +187,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-left">
-            <p class="text-light mb-0">Copyright &copy; 2023 a theme by <a class="text-gradient-primary"
+            <p class="text-light mb-0">Copyright &copy; 2023<a class="text-gradient-primary"
                 href="https://www.etecitapira.com.br/">Etec</a>
             </p>
           </div>
@@ -225,28 +208,38 @@
   <!-- /footer -->
 
   <!-- jQuery -->
-  <script src='{% static "js/jQuery/jquery.min.js"%}'></script>
+  <script src="{% static 'js/jQuery/jquery.min.js' %}"></script>
   <!-- Bootstrap JS -->
-  <script src='{% static "js/bootstrap/bootstrap.min.js"%}'></script>
+  <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
   <!-- slick slider -->
-  <script src='{% static "js/slick/slick.min.js"%}'></script>
+  <script src="{% static 'js/slick/slick.min.js' %}"></script>
   <!-- venobox -->
-  <script src='{% static "js/venobox/venobox.min.js"%}'></script>
+  <script src="{% static 'js/venobox/venobox.min.js' %}"></script>
   <!-- shuffle -->
-  <script src='{% static "js/shuffle/shuffle.min.js" %}'></script>
+  <script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
   <!-- apear js -->
-  <script src='{% static "js/counto/apear.js" %}'></script>
+  <script src="{% static 'js/counto/apear.js' %}"></script>
   <!-- counter -->
-  <script src='{% static "js/counto/counTo.js" %}'></script>
+  <script src="{% static 'js/counto/counTo.js' %}"></script>
   <!-- card slider -->
-  <script src='{static "js/card-slider/js/card-slider-min.js" %}'></script>
+  <script src="{% static 'js/card-slider/js/card-slider-min.js' %}"></script>
   <!-- google map -->
   <script
-    src='{% static "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places" %}'></script>
-  <script src='{% static "js/google-map/gmap.js" %}'></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+  <script src="{% static 'js/google-map/gmap.js' %}"></script>
 
   <!-- Main Script -->
-  <script src='{% static "js/script.js" %}'></script>
+  <script src="{% static 'js/script.js' %}"></script>
 
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
